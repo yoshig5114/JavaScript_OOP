@@ -58,7 +58,28 @@ coder1.greeting();
 console.log("EXERCISE 4 :\n==========\n");
 
 class Calculator {
-    constructor(result){
-        this.result = 0;
+    constructor(result = 0){
+        this.result = result;
+        
+    }
+    add(x,y){
+        this.result = x + y;
+    }
+    subtract(x,y){
+        this.result = x - y;
+    }
+    multiply(x,y){
+        this.result = x * y;
+    }
+    divide(x,y){
+        this.result = x / y;
+    }
+    displayResult(){
+        console.log(this.result);
     }
 }
+const Calc1 = new Calculator();
+Calc1.add(2,2);
+Calc1.displayResult();
+Calc1.divide(800,80);
+Calc1.displayResult();
